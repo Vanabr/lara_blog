@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Comment;
 use App\Post;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -55,4 +56,5 @@ class PostsController extends Controller
 
         return redirect('/');
     }
+
 }

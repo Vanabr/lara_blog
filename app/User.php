@@ -31,4 +31,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class);
     }
+
+    public function publish(Post $post)
+    {
+        //Post::create(request(['title', 'body']));
+        return $this->posts()->save($post);
+    }
 }

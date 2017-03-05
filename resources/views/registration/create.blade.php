@@ -2,11 +2,17 @@
 
 @section('content')
     <div class="col-sm-8">
-        <h1>Sign in</h1>
+        <h1>Register</h1>
 
-        <form method="post" action="/login">
+        <form method="post" action="/register">
             {{ csrf_field() }}
 
+            <div class="form-group">
+
+                <label for="name">Name:</label>
+
+                <input type="text" name="name" id="name" class="form-control" required>
+            </div>
 
             <div class="form-group">
 
@@ -23,9 +29,17 @@
                        required>
             </div>
 
+            <div class="form-group">
+
+                <label for="password_confirmation">Password_confirmation:</label>
+
+                <input type="password_confirmation"
+                       name="password_confirmation"
+                       id="password_confirmation" class="form-control" required>
+            </div>
 
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">Sign In</button>
+                <button type="submit" class="btn btn-primary">Register</button>
             </div>
 
 

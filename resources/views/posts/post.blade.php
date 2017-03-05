@@ -4,6 +4,9 @@
             {{ $post->title }}
         </a>
     </h2>
-    <p class="blog-post-meta"> {{ LocalizedCarbon::instance($post->created_at)->diffForHumans() }}</p>
+    <p class="blog-post-meta">
+        {{ LocalizedCarbon::instance($post->created_at)->diffForHumans() }}
+        {{ $post->user->name }}
+    </p>
     {{ $post->body }}
 </div><!-- /.blog-post -->
